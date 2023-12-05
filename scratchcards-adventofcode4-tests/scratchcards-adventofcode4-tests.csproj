@@ -17,4 +17,8 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\scratchcards-adventofcode4-net\scratchcards-adventofcode4-net.csproj" />
+  </ItemGroup>
+
 </Project>
