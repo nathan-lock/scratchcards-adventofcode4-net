@@ -2,7 +2,6 @@
 {
     internal class Program
     {
-
         private const string _filePath = "input.txt";
 
         static void Main(string[] args)
