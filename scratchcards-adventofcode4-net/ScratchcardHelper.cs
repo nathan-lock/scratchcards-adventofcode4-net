@@ -3,12 +3,12 @@
     public static class ScratchcardHelper
     {
         public static IEnumerable<Card> ParseCardsString(string ticketsString) =>
-            ticketsString.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries)
+            ticketsString.Split('\n', StringSplitOptions.RemoveEmptyEntries)
                          .Select(line =>
                          {
-                             var parts = line.Split(new[] { ':' }, 2)[1]
-                                             .Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries)
-                                             .Select(part => part.Trim().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                             var parts = line.Split(':', 2)[1]
+                                             .Split('|', StringSplitOptions.RemoveEmptyEntries)
+                                             .Select(part => part.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries)
                                                                  .Select(int.Parse)
                                                                  .ToArray())
                                              .ToArray();
